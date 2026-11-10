@@ -18,4 +18,9 @@ source /etc/profile
 alias ls='ls --color=auto'
 alias grep='grep --color=always'
 export PS1="\[$(tput bold)\]\[$(tput setaf 3)\]\[$(tput setaf 3)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 3)\]OSIC-tools \[$(tput setaf 4)\]\W\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
-sak-pdk-script.sh sky130A
+
+export PDK=sky130A
+export PDKPATH=$PDK_ROOT/$PDK
+export STD_CELL_LIBRARY=sky130_fd_sc_hd
+export SPICE_USERINIT_DIR=$PDKPATH/libs.tech/ngspice
+export KLAYOUT_PATH=$PDKPATH/libs.tech/klayout
